@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#1E88E5">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="لُقيا - المنصة الأولى في اليمن لإعادة المفقودات بطريقة سهلة وآمنة">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- iOS specific tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="لُقيا">
+    <link rel="apple-touch-icon" href="img/logo-192.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <title>لُقيا - منصة إعادة المفقودات في اليمن</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rtl-fixes.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JavaScript Files -->
+    <script src="js/preloader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/script.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        html.color-theme-in-transition,
+        html.color-theme-in-transition *,
+        html.color-theme-in-transition *:before,
+        html.color-theme-in-transition *:after {
+            transition: all 0.3s ease !important;
+            transition-delay: 0 !important;
+        }
+        
+        /* Fix for iOS safe area */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+            }
+            
+            header, footer {
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+            }
+        }
+        
+        /* Fix for position:fixed elements on iOS */
+        @supports (-webkit-touch-callout: none) {
+            header.scrolled {
+                position: sticky;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home" aria-label="الرئيسية">
+                    <div class="logo-icon">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                    </div>
+                    <h1>لُقيا</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="mobile-menu-btn" aria-expanded="false" aria-label="القائمة الرئيسية">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </div>
+                <ul class="main-nav">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عن المشروع</a></li>
+                    <li><a href="#vision">رؤيتنا</a></li>
+                    <li><a href="#goals">أهدافنا</a></li>
+                    <li><a href="#success-indicators">مؤشرات النجاح</a></li>
+                    <li><a href="#how-it-works">كيفية العمل</a></li>
+                    <li><a href="#benefits">الفوائد والتأثير</a></li>
+                    <li><a href="#audience">الجمهور المستهدف</a></li>
+                    <li><a href="#brand">الهوية البصرية</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#support" class="nav-cta">ادعم المشروع</a></li>
+                </ul>
+            </nav>
+            <div class="mode-toggle">
+                <button id="mode-switch" aria-label="تغيير الوضع المظلم/المضيء"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInRight">
+                <span class="pre-title">المنصة الأولى في اليمن</span>
+                <h1>لُقيا</h1>
+                <h2>استعد مفقوداتك بطريقة سهلة وآمنة</h2>
+                <p>نجمع بين التكنولوجيا والقيم الإنسانية لمساعدة الناس في استعادة ممتلكاتهم المفقودة وتعزيز قيم الأمانة والتكافل في المجتمع اليمني</p>
+                <div class="cta-buttons">
+                    <a href="#support" class="btn primary">ادعم المشروع <i class="fas fa-arrow-left"></i></a>
+                    <a href="#about" class="btn secondary">تعرف علينا</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-count="50000">+50,000</span>
+                        <span class="stat-label">مستخدم متوقع</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="30">30%</span>
+                        <span class="stat-label">معدل نجاح في إعادة المفقودات</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="15">10-15</span>
+                        <span class="stat-label">شراكة استراتيجية</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate__animated animate__fadeInLeft">
+                <div class="illustration">
+                    <div class="illustration-circle">
+                        <i class="fas fa-handshake fa-4x"></i>
+                    </div>
+                    <div class="illustration-element el-1">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="illustration-element el-2">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="illustration-element el-3">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="illustration-element el-4">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,218.7C384,213,480,235,576,229.3C672,224,768,192,864,181.3C960,171,1056,181,1152,197.3C1248,213,1344,235,1392,245.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">تعرف علينا</span>
+                <h2>عن مشروع لُقيا</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>مشروع "لُقيا" هو منصة رقمية مبتكرة تهدف إلى حل مشكلة فقدان الأغراض الشخصية والممتلكات في المجتمع اليمني، من خلال توفير آلية آمنة وفعالة للإبلاغ عن المفقودات واستردادها.</p>
+                    <p>نسعى من خلال "لُقيا" إلى تعزيز قيم الأمانة والتكافل في المجتمع وتخفيف الأعباء الاقتصادية على المواطنين في ظل الظروف الصعبة التي يمر بها اليمن.</p>
+                </div>
+                
+                <div class="features-container">
+                    <div class="features-row">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>منصة متكاملة</h3>
+                            <p>تطبيق للهواتف الذكية وموقع ويب يعملان حتى مع اتصال إنترنت ضعيف</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>آمنة وموثوقة</h3>
+                            <p>نظام للتحقق من هوية المستخدمين وحماية البيانات الشخصية</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3>تغطية واسعة</h3>
+                            <p>خدمات تغطي جميع محافظات اليمن مع التركيز أولاً على المدن الرئيسية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="values-title">قيمنا الأساسية</h3>
+                <div class="values">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>الأمانة والنزاهة</h3>
+                            <p>نؤمن بأن إعادة المفقودات إلى أصحابها هي واجب أخلاقي وديني</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>التكافل الاجتماعي</h3>
+                            <p>نعزز التعاون والتضامن بين أفراد المجتمع لمساعدة بعضهم البعض</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>الشفافية والمصداقية</h3>
+                            <p>نلتزم بالشفافية في جميع عملياتنا، سواء مع المستخدمين أو المتبرعين</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>الابتكار والتطوير</h3>
+                            <p>نسعى دائماً إلى تطوير المنصة وتحديثها بناءً على تجارب المستخدمين</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>رؤيتنا ورسالتنا</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="vision-content">
+                <div class="vision-card">
+                    <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
+                    <p>يسعى مشروع "لُقيا" إلى أن يكون المنصة الرائدة والموثوقة في اليمن لإعادة المفقودات إلى أصحابها، من خلال بناء مجتمع رقمي يعزز قيم الأمانة والتكافل الاجتماعي. نطمح إلى خلق بيئة آمنة وفعالة تجمع بين التكنولوجيا والقيم الإنسانية لحل مشكلة اجتماعية ملموسة تؤثر على حياة الناس اليومية.</p>
+                </div>
+                <div class="vision-card">
+                    <h3><i class="fas fa-bullhorn"></i> رسالتنا</h3>
+                    <p>رسالة مشروع "لُقيا" هي توظيف التكنولوجيا لبناء جسور الثقة بين أفراد المجتمع اليمني، من خلال توفير منصة آمنة وسهلة الاستخدام تمكّن الناس من الإبلاغ عن المفقودات والعثور عليها. نلتزم بتقديم خدمة مجانية ذات جودة عالية، تراعي خصوصية المستخدمين وتحمي بياناتهم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="goals" class="goals">
+        <div class="container">
+            <div class="section-header">
+                <h2>أهدافنا الاستراتيجية</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="goals-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-target="short-term">قصيرة المدى</button>
+                    <button class="tab-btn" data-target="mid-term">متوسطة المدى</button>
+                    <button class="tab-btn" data-target="long-term">طويلة المدى</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="short-term">
+                        <h3>الأهداف قصيرة المدى (1-2 سنة)</h3>
+                        <ul>
+                            <li><strong>إطلاق منصة متكاملة:</strong> تطوير وإطلاق تطبيق للهواتف الذكية وموقع ويب يوفران واجهة سهلة الاستخدام للإبلاغ عن المفقودات والعثور عليها.</li>
+                            <li><strong>بناء قاعدة مستخدمين أولية:</strong> استقطاب 50,000 مستخدم نشط في السنة الأولى، مع التركيز على المدن الرئيسية (صنعاء، عدن، تعز، الحديدة، إب).</li>
+                            <li><strong>تأسيس شراكات استراتيجية:</strong> بناء شراكات مع 10-15 جهة محلية ودولية لدعم المشروع.</li>
+                            <li><strong>تطوير نظام فعال للتحقق من المستخدمين:</strong> إنشاء آلية موثوقة للتحقق من هوية المستخدمين وبناء نظام للتقييم والمراجعة.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="mid-term">
+                        <h3>الأهداف متوسطة المدى (3-5 سنوات)</h3>
+                        <ul>
+                            <li><strong>توسيع النطاق الجغرافي:</strong> الوصول إلى جميع محافظات اليمن، بما في ذلك المناطق الريفية والنائية.</li>
+                            <li><strong>تنويع الخدمات:</strong> توسيع نطاق المنصة لتشمل خدمات إضافية مثل الإبلاغ عن الأشخاص المفقودين والحيوانات الضالة.</li>
+                            <li><strong>بناء نظام مستدام للتمويل:</strong> تطوير مصادر متنوعة ومستدامة للتمويل.</li>
+                            <li><strong>تعزيز التكامل مع الجهات الرسمية:</strong> بناء نظام متكامل للتعاون مع الجهات الأمنية والحكومية المعنية بالمفقودات.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="long-term">
+                        <h3>الأهداف طويلة المدى (أكثر من 5 سنوات)</h3>
+                        <ul>
+                            <li><strong>تطوير نموذج قابل للتكرار:</strong> تطوير نموذج عمل متكامل يمكن تكراره وتطبيقه في بلدان أخرى ذات ظروف مشابهة.</li>
+                            <li><strong>إنشاء مركز أبحاث وابتكار:</strong> تأسيس مركز متخصص للأبحاث والابتكار في مجال استخدام التكنولوجيا لحل المشكلات الاجتماعية.</li>
+                            <li><strong>بناء منظومة متكاملة للخدمات المجتمعية:</strong> توسيع نطاق المشروع ليشمل منظومة متكاملة من الخدمات المجتمعية.</li>
+                            <li><strong>تحقيق الاكتفاء الذاتي المالي:</strong> الوصول إلى مرحلة الاكتفاء الذاتي المالي من خلال مصادر دخل مستدامة ومتنوعة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Indicators Section -->
+    <section id="success-indicators" class="success-indicators">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">قياس النجاح</span>
+                <h2>مؤشرات النجاح</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="indicators-intro">
+                <p>نسعى في مشروع "لُقيا" إلى تحقيق نتائج ملموسة وقابلة للقياس، تعكس مدى نجاحنا في تحقيق رؤيتنا وأهدافنا. نعتمد مجموعة من المؤشرات الكمية والنوعية لتقييم أدائنا ومتابعة تطور المشروع.</p>
+            </div>
+            
+            <div class="indicators-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-target="quantitative">مؤشرات كمية</button>
+                    <button class="tab-btn" data-target="qualitative">مؤشرات نوعية</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-content active" id="quantitative">
+                        <div class="indicators-grid">
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #1E88E5;">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>عدد المستخدمين</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">50,000</span>
+                                    <span class="target-label">مستخدم في السنة الأولى</span>
+                                </div>
+                                <div class="indicator-target">
+                                    <span class="target-number">200,000</span>
+                                    <span class="target-label">مستخدم بحلول السنة الثالثة</span>
+                                </div>
+                                <p>قياس عدد المستخدمين المسجلين والنشطين، مع تحليل توزيعهم الجغرافي والديموغرافي.</p>
+                            </div>
+                            
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #26A69A;">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <h3>معدل النجاح</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">30%</span>
+                                    <span class="target-label">في السنة الأولى</span>
+                                </div>
+                                <div class="indicator-target">
+                                    <span class="target-number">50%</span>
+                                    <span class="target-label">بحلول السنة الثالثة</span>
+                                </div>
+                                <p>نسبة المفقودات التي تم إعادتها إلى أصحابها من إجمالي المفقودات المبلغ عنها.</p>
+                            </div>
+                            
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #FF9800;">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <h3>القيمة المالية المستردة</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">100M+</span>
+                                    <span class="target-label">ريال يمني في السنة الأولى</span>
+                                </div>
+                                <p>تقدير القيمة المالية الإجمالية للممتلكات التي تم استردادها بفضل المنصة، مما يوضح التأثير الاقتصادي للمشروع.</p>
+                            </div>
+                            
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #FFC107;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>معدل النمو</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">10%</span>
+                                    <span class="target-label">نمو شهري في عدد المستخدمين</span>
+                                </div>
+                                <p>قياس معدل نمو عدد المستخدمين والبلاغات والحالات الناجحة على أساس شهري وسنوي.</p>
+                            </div>
+                            
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #7E57C2;">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <h3>عدد الشراكات</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">10-15</span>
+                                    <span class="target-label">شراكة استراتيجية في السنة الأولى</span>
+                                </div>
+                                <p>عدد الشراكات الاستراتيجية مع الجهات المحلية والدولية، وحجم الدعم المقدم من هذه الشراكات.</p>
+                            </div>
+                            
+                            <div class="indicator-card">
+                                <div class="indicator-icon" style="background-color: #4CAF50;">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <h3>معدل المشاركة</h3>
+                                <div class="indicator-target">
+                                    <span class="target-number">40%</span>
+                                    <span class="target-label">من إجمالي المستخدمين المسجلين</span>
+                                </div>
+                                <p>قياس نسبة المستخدمين النشطين الذين يتفاعلون بانتظام مع المنصة، سواء من خلال الإبلاغ عن مفقودات أو العثور عليها.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="qualitative">
+                        <div class="indicators-list">
+                            <div class="indicator-item">
+                                <div class="indicator-item-icon" style="background-color: #1E88E5;">
+                                    <i class="fas fa-smile"></i>
+                                </div>
+                                <div class="indicator-item-content">
+                                    <h3>رضا المستخدمين</h3>
+                                    <p>قياس مستوى رضا المستخدمين عن المنصة وخدماتها من خلال استطلاعات الرأي والتقييمات والملاحظات. نستهدف تحقيق معدل رضا 80% بين المستخدمين.</p>
+                                    <div class="measurement-methods">
+                                        <span class="method">استطلاعات رأي دورية</span>
+                                        <span class="method">تقييمات التطبيق</span>
+                                        <span class="method">تحليل الملاحظات</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="indicator-item">
+                                <div class="indicator-item-icon" style="background-color: #26A69A;">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="indicator-item-content">
+                                    <h3>التأثير النفسي والاجتماعي</h3>
+                                    <p>تقييم التأثير النفسي والاجتماعي للمشروع على المستخدمين والمجتمع، من خلال المقابلات ودراسات الحالة والشهادات. سيتم جمع وتوثيق قصص النجاح والتجارب الإيجابية للمستخدمين.</p>
+                                    <div class="measurement-methods">
+                                        <span class="method">دراسات حالة</span>
+                                        <span class="method">مقابلات شخصية</span>
+                                        <span class="method">شهادات المستخدمين</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="indicator-item">
+                                <div class="indicator-item-icon" style="background-color: #FF9800;">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="indicator-item-content">
+                                    <h3>الوعي المجتمعي</h3>
+                                    <p>قياس مستوى الوعي بالمشروع وأهدافه في المجتمع، ومدى تغير السلوكيات والمواقف تجاه التعامل مع المفقودات. سيتم إجراء دراسات دورية لتقييم هذا الوعي.</p>
+                                    <div class="measurement-methods">
+                                        <span class="method">استطلاعات مجتمعية</span>
+                                        <span class="method">تحليل وسائل التواصل</span>
+                                        <span class="method">دراسات سلوكية</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="indicator-item">
+                                <div class="indicator-item-icon" style="background-color: #FFC107;">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="indicator-item-content">
+                                    <h3>جودة الخدمة</h3>
+                                    <p>تقييم جودة الخدمة المقدمة من حيث سهولة الاستخدام، سرعة الاستجابة، فعالية الحلول، وأمان المنصة. سيتم تطوير معايير محددة لقياس جودة الخدمة ومراقبتها باستمرار.</p>
+                                    <div class="measurement-methods">
+                                        <span class="method">اختبارات تجربة المستخدم</span>
+                                        <span class="method">تحليل مؤشرات الأداء</span>
+                                        <span class="method">تقييمات الجودة</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="indicator-item">
+                                <div class="indicator-item-icon" style="background-color: #7E57C2;">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="indicator-item-content">
+                                    <h3>السمعة والمصداقية</h3>
+                                    <p>تقييم سمعة المشروع ومصداقيته في المجتمع ولدى الجهات المعنية، من خلال تحليل التغطية الإعلامية والتعليقات العامة والتقييمات. سيتم رصد وتحليل الإشارات إلى المشروع في وسائل الإعلام ومنصات التواصل الاجتماعي.</p>
+                                    <div class="measurement-methods">
+                                        <span class="method">تحليل المحتوى الإعلامي</span>
+                                        <span class="method">رصد وسائل التواصل</span>
+                                        <span class="method">تقييمات الشركاء</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-visualization">
+                <h3>توقعات النمو والتأثير</h3>
+                <div class="charts-container">
+                    <div class="chart">
+                        <div class="chart-header">
+                            <h4>نمو عدد المستخدمين</h4>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="color-dot" style="background-color: #1E88E5;"></span> متوقع</span>
+                                <span class="legend-item"><span class="color-dot" style="background-color: #26A69A;"></span> مستهدف</span>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 1</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 30%; background-color: #1E88E5;"></div>
+                                        <div class="bar target" style="height: 35%; background-color: #26A69A;"></div>
+                                    </div>
+                                    <span class="value-label">50ألف</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 2</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 50%; background-color: #1E88E5;"></div>
+                                        <div class="bar target" style="height: 55%; background-color: #26A69A;"></div>
+                                    </div>
+                                    <span class="value-label">100ألف</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 3</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 75%; background-color: #1E88E5;"></div>
+                                        <div class="bar target" style="height: 85%; background-color: #26A69A;"></div>
+                                    </div>
+                                    <span class="value-label">200ألف</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 5</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 95%; background-color: #1E88E5;"></div>
+                                        <div class="bar target" style="height: 100%; background-color: #26A69A;"></div>
+                                    </div>
+                                    <span class="value-label">350ألف</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart">
+                        <div class="chart-header">
+                            <h4>معدل نجاح إعادة المفقودات</h4>
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="color-dot" style="background-color: #FF9800;"></span> متوقع</span>
+                                <span class="legend-item"><span class="color-dot" style="background-color: #FFC107;"></span> مستهدف</span>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 1</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 30%; background-color: #FF9800;"></div>
+                                        <div class="bar target" style="height: 35%; background-color: #FFC107;"></div>
+                                    </div>
+                                    <span class="value-label">30%</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 2</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 40%; background-color: #FF9800;"></div>
+                                        <div class="bar target" style="height: 45%; background-color: #FFC107;"></div>
+                                    </div>
+                                    <span class="value-label">40%</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 3</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 50%; background-color: #FF9800;"></div>
+                                        <div class="bar target" style="height: 55%; background-color: #FFC107;"></div>
+                                    </div>
+                                    <span class="value-label">50%</span>
+                                </div>
+                                <div class="chart-year">
+                                    <span class="year-label">السنة 5</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="height: 60%; background-color: #FF9800;"></div>
+                                        <div class="bar target" style="height: 65%; background-color: #FFC107;"></div>
+                                    </div>
+                                    <span class="value-label">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="indicators-cta">
+                <h3>شارك في تحقيق نجاح مشروع لُقيا</h3>
+                <p>ساهم معنا في بناء منصة تساعد المجتمع اليمني وتعزز قيم الأمانة والتكافل الاجتماعي</p>
+                <div class="cta-buttons">
+                    <a href="#support" class="btn primary">ادعم المشروع <i class="fas fa-arrow-left"></i></a>
+                    <a href="#how-it-works" class="btn secondary">تعرف على آلية العمل</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How the Platform Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">آلية العمل</span>
+                <h2>كيف تعمل منصة لُقيا</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="process-intro">
+                <p>تجمع منصة "لُقيا" بين التكنولوجيا والقيم الإنسانية لتوفير حلول فعالة لمشكلة المفقودات في اليمن. إليك كيف تعمل المنصة لمساعدتك في استعادة مفقوداتك أو إعادة المفقودات لأصحابها.</p>
+            </div>
+            
+            <div class="process-flow">
+                <div class="process-tabs">
+                    <button class="process-tab active" data-target="lost-item">فقدت شيئاً</button>
+                    <button class="process-tab" data-target="found-item">وجدت شيئاً</button>
+                </div>
+                
+                <div class="process-content">
+                    <div class="process-panel active" id="lost-item">
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>إنشاء حساب</h3>
+                                    <p>سجل في منصة لُقيا من خلال تطبيق الهاتف المحمول أو موقع الويب. يتطلب التسجيل معلومات بسيطة لتأكيد هويتك مع الحفاظ على خصوصيتك.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>تسجيل المفقودات</h3>
+                                    <p>قم بإدخال تفاصيل الغرض المفقود مثل النوع، المكان، التاريخ والخصائص المميزة. يمكنك إضافة صورة إن وجدت وتحديد الموقع على الخريطة.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>البحث المطابق</h3>
+                                    <p>تقوم المنصة تلقائياً بمطابقة بلاغك مع بلاغات الأغراض المعثور عليها لإيجاد تطابق محتمل، كما يمكنك تصفح قائمة المعثورات يدوياً.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>التواصل الآمن</h3>
+                                    <p>عند إيجاد تطابق محتمل، يمكنك التواصل مع الشخص الذي عثر على غرضك من خلال نظام مراسلة آمن داخل المنصة دون مشاركة بياناتك الشخصية.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>التحقق والاستعادة</h3>
+                                    <p>قدم إثباتات ملكية الغرض (تفاصيل دقيقة، صور، أو وثائق) ثم اتفق على طريقة آمنة لاستعادة الغرض. يمكنك الاختيار بين تسليم مباشر أو عبر مراكز موثوقة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-panel" id="found-item">
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-icon finder">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>إنشاء حساب</h3>
+                                    <p>سجل في منصة لُقيا للمساهمة في إعادة المفقودات لأصحابها. يتم التحقق من هويتك بطريقة آمنة تحمي خصوصيتك وخصوصية الآخرين.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon finder">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>تسجيل المعثورات</h3>
+                                    <p>قم بتسجيل الغرض الذي عثرت عليه مع تقديم وصف عام له. يمكنك إضافة صورة وتحديد مكان العثور عليه دون كشف تفاصيل تمكن أي شخص من المطالبة به.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon finder">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>الإشعار بالتطابق</h3>
+                                    <p>ستتلقى إشعاراً عندما يقوم شخص ما بالبحث عن غرض يطابق وصف ما عثرت عليه. يمكنك أيضاً تصفح بلاغات المفقودات للبحث عن تطابق محتمل.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon finder">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>التواصل والتحقق</h3>
+                                    <p>تواصل مع صاحب الغرض المحتمل عبر نظام المراسلة الآمن. اطلب منه تقديم تفاصيل دقيقة عن الغرض للتأكد من أنه المالك الحقيقي.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-icon finder">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h3>إعادة المفقودات</h3>
+                                    <p>بعد التأكد من هوية المالك، اتفق على طريقة آمنة لإعادة الغرض. يمكنك اختيار التسليم المباشر أو الاستعانة بمراكز التسليم الموثوقة التابعة للمنصة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="platform-features">
+                <h3>مميزات منصة لُقيا</h3>
+                <div class="features-grid">
+                    <div class="platform-feature">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>نظام تحقق آمن</h4>
+                        <p>آلية متطورة للتحقق من هوية المستخدمين مع حماية الخصوصية</p>
+                    </div>
+                    
+                    <div class="platform-feature">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>اتصال منخفض البيانات</h4>
+                        <p>يعمل بكفاءة حتى مع اتصال إنترنت ضعيف أو متقطع</p>
+                    </div>
+                    
+                    <div class="platform-feature">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>تحديد المواقع</h4>
+                        <p>تتبع أماكن فقدان الأغراض والعثور عليها على الخريطة</p>
+                    </div>
+                    
+                    <div class="platform-feature">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>تواصل آمن</h4>
+                        <p>نظام مراسلة داخلي يحمي خصوصية جميع الأطراف</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="#support" class="btn primary">انضم إلى منصة لُقيا <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits and Impact Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">القيمة والتأثير</span>
+                <h2>كيف تساعدك منصة لُقيا</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="benefits-intro">
+                <p>تقدم منصة "لُقيا" العديد من الفوائد للمجتمع اليمني، من خلال حل مشكلة اجتماعية ملموسة وتعزيز قيم الأمانة والتكافل. تعرف على كيف يمكن للمنصة أن تساعدك وتحدث فرقاً إيجابياً في مجتمعك.</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefits-image">
+                    <div class="benefits-illustration">
+                        <div class="benefits-circle">
+                            <i class="fas fa-hands-helping fa-3x"></i>
+                        </div>
+                        <div class="benefits-elements">
+                            <div class="benefit-element el-1">
+                                <span class="benefit-value">30%</span>
+                                <span class="benefit-label">نسبة نجاح متوقعة</span>
+                            </div>
+                            <div class="benefit-element el-2">
+                                <span class="benefit-value">50K+</span>
+                                <span class="benefit-label">مستخدم متوقع</span>
+                            </div>
+                            <div class="benefit-element el-3">
+                                <span class="benefit-value">15+</span>
+                                <span class="benefit-label">شراكة استراتيجية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>توفير الخسائر المادية</h3>
+                            <p>في ظل الظروف الاقتصادية الصعبة، تساعدك لُقيا على استعادة ممتلكاتك الثمينة وتوفير تكاليف شراء بدائل جديدة، مما يخفف العبء المالي خاصة للوثائق والأجهزة باهظة الثمن.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>تقليل القلق والتوتر</h3>
+                            <p>فقدان الأغراض الشخصية يسبب قلقاً نفسياً كبيراً، خاصة إذا كانت ذات قيمة معنوية. توفر لُقيا فرصة حقيقية لاسترداد هذه المفقودات وتخفيف التوتر المصاحب لفقدانها.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>تعزيز التكافل الاجتماعي</h3>
+                            <p>تساهم المنصة في بناء مجتمع أكثر ترابطاً وتعاوناً من خلال تشجيع الأفراد على مساعدة بعضهم البعض وإعادة المفقودات لأصحابها، مما يعزز قيم الأمانة والثقة المتبادلة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>حماية البيانات والخصوصية</h3>
+                            <p>تضمن المنصة حماية معلوماتك الشخصية وتتيح لك التواصل مع الآخرين بطريقة آمنة، دون الحاجة لمشاركة بيانات الاتصال الخاصة بك في وسائل التواصل الاجتماعي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-impact">
+                <h3>التأثير الاجتماعي</h3>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="impact-value" data-count="100">100M+</div>
+                        <div class="impact-label">قيمة المفقودات المتوقع استردادها <span>(ريال يمني)</span></div>
+                    </div>
+                    
+                    <div class="impact-stat">
+                        <div class="impact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="impact-value" data-count="200">200K+</div>
+                        <div class="impact-label">مستخدم مستهدف خلال ثلاث سنوات</div>
+                    </div>
+                    
+                    <div class="impact-stat">
+                        <div class="impact-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="impact-value" data-count="22">22</div>
+                        <div class="impact-label">محافظة يمنية مستهدفة</div>
+                    </div>
+                </div>
+                
+                <div class="principles">
+                    <div class="principle">
+                        <h4>الشمولية وسهولة الوصول</h4>
+                        <p>نصمم خدماتنا لتكون متاحة لجميع شرائح المجتمع اليمني بغض النظر عن المستوى التعليمي أو الاقتصادي أو الموقع الجغرافي.</p>
+                    </div>
+                    
+                    <div class="principle">
+                        <h4>الشفافية والمصداقية</h4>
+                        <p>نلتزم بالشفافية في جميع عملياتنا سواء مع المستخدمين أو المتبرعين أو الشركاء لبناء الثقة المتبادلة.</p>
+                    </div>
+                    
+                    <div class="principle">
+                        <h4>الابتكار والتطوير المستمر</h4>
+                        <p>نسعى دائماً إلى تطوير المنصة وتحديثها بناءً على تجارب المستخدمين وملاحظاتهم لتقديم أفضل خدمة ممكنة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <h3>تجارب مستخدمي المنصة</h3>
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"فقدت حقيبتي التي تحتوي على جميع وثائقي الشخصية والمهنية في سوق باب اليمن. بفضل منصة لُقيا، تمكنت من استعادتها في أقل من أسبوع. لم أكن لأتمكن من ذلك لولا هذه المنصة المذهلة."</p>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>سعيد الحسني</h4>
+                                <p>صنعاء</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"عثرت على هاتف محمول في سيارة أجرة ولم أعرف كيف أعيده لصاحبه. من خلال منصة لُقيا تمكنت من التواصل مع المالك بطريقة آمنة وإعادة الهاتف له. شعور رائع أن تساعد الآخرين."</p>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>فاطمة الزبيدي</h4>
+                                <p>عدن</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="join-cta">
+                <h3>كن جزءًا من منصة لُقيا</h3>
+                <p>انضم إلينا اليوم للمساهمة في بناء مجتمع يعزز قيم الأمانة والتكافل، وساعدنا في نشر ثقافة إعادة المفقودات لأصحابها.</p>
+                <div class="cta-buttons">
+                    <a href="#support" class="btn primary">ادعم المشروع <i class="fas fa-arrow-left"></i></a>
+                    <a href="#faq" class="btn secondary">الأسئلة الشائعة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section id="audience" class="audience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">المستهدفون</span>
+                <h2>الجمهور المستهدف</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="audience-content">
+                <div class="audience-card">
+                    <i class="fas fa-users"></i>
+                    <h3>المستخدمون</h3>
+                    <ul>
+                        <li><strong>الفئة العمرية:</strong> الشباب والبالغين (18-45 سنة)</li>
+                        <li><strong>التوزيع الجغرافي:</strong> المدن الرئيسية أولاً، ثم التوسع للمناطق الريفية</li>
+                        <li><strong>مستخدمي الهواتف الذكية:</strong> تركيز على مستخدمي نظام Android</li>
+                        <li><strong>جميع المستويات التعليمية والاقتصادية</strong></li>
+                    </ul>
+                </div>
+                <div class="audience-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>الداعمون المحتملون</h3>
+                    <ul>
+                        <li><strong>الشركات المحلية:</strong> خاصة في قطاعات الاتصالات والتكنولوجيا</li>
+                        <li><strong>المنظمات الدولية:</strong> العاملة في مجالات التنمية والإغاثة</li>
+                        <li><strong>رجال الأعمال والمغتربين:</strong> اليمنيون المقيمون في الخارج</li>
+                        <li><strong>المؤسسات التعليمية والجهات الحكومية</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Identity Section -->
+    <section id="brand" class="brand-identity">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">هوية المشروع</span>
+                <h2>الهوية البصرية لمشروع لُقيا</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="brand-content">
+                <div class="brand-intro">
+                    <p>تعكس الهوية البصرية لمشروع "لُقيا" قيم ومعاني اللقاء والعثور والأمل والفرح، من خلال نظام لوني متكامل يجمع بين الأمان والثقة والبهجة. تم تطوير هذه الهوية لتعمل بشكل متناغم عبر مختلف المنصات في الوضعين النهاري والليلي.</p>
+                </div>
+                
+                <div class="color-system">
+                    <h3>نظام الألوان الأساسي</h3>
+                    
+                    <div class="color-categories">
+                        <div class="color-category">
+                            <h4>الألوان الأساسية</h4>
+                            <div class="color-palettes">
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #1E88E5"></div>
+                                    <div class="color-info">
+                                        <h5>أزرق لُقيا</h5>
+                                        <span class="color-hex">#1E88E5</span>
+                                        <p>اللون الأساسي للمشروع، يرمز للثقة والأمل</p>
+                                    </div>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #26A69A"></div>
+                                    <div class="color-info">
+                                        <h5>فيروزي لُقيا</h5>
+                                        <span class="color-hex">#26A69A</span>
+                                        <p>اللون المساند، يرمز للعثور والرعاية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="color-category">
+                            <h4>الألوان الثانوية</h4>
+                            <div class="color-palettes">
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #FF9800"></div>
+                                    <div class="color-info">
+                                        <h5>برتقالي اللقاء</h5>
+                                        <span class="color-hex">#FF9800</span>
+                                        <p>يرمز للفرح والبهجة عند العثور</p>
+                                    </div>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #FFC107"></div>
+                                    <div class="color-info">
+                                        <h5>أصفر الأمل</h5>
+                                        <span class="color-hex">#FFC107</span>
+                                        <p>يرمز للتفاؤل والإيجابية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="color-category wide">
+                            <h4>الوضع الليلي</h4>
+                            <div class="color-palettes dark-mode-colors">
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #64B5F6"></div>
+                                    <div class="color-info">
+                                        <h5>أزرق لُقيا الليلي</h5>
+                                        <span class="color-hex">#64B5F6</span>
+                                    </div>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #4DB6AC"></div>
+                                    <div class="color-info">
+                                        <h5>فيروزي لُقيا الليلي</h5>
+                                        <span class="color-hex">#4DB6AC</span>
+                                    </div>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #FFB74D"></div>
+                                    <div class="color-info">
+                                        <h5>برتقالي اللقاء الليلي</h5>
+                                        <span class="color-hex">#FFB74D</span>
+                                    </div>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-box" style="background-color: #FFD54F"></div>
+                                    <div class="color-info">
+                                        <h5>أصفر الأمل الليلي</h5>
+                                        <span class="color-hex">#FFD54F</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="brand-mockups">
+                    <h3>تطبيقات الهوية البصرية</h3>
+                    
+                    <div class="ui-elements">
+                        <div class="ui-category">
+                            <h4>الأزرار والعناصر التفاعلية</h4>
+                            <div class="ui-demo">
+                                <div class="button-demo">
+                                    <button class="btn primary">زر رئيسي</button>
+                                    <button class="btn secondary">زر ثانوي</button>
+                                    <button class="btn tertiary">زر برتقالي</button>
+                                    <button class="btn primary disabled">زر غير متاح</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ui-category">
+                            <h4>الألوان في مكونات الواجهة</h4>
+                            <div class="component-grid">
+                                <div class="component-card">
+                                    <h5>العناوين</h5>
+                                    <div class="component-demo">
+                                        <h3 class="demo-title">عنوان رئيسي</h3>
+                                        <h4 class="demo-subtitle">عنوان فرعي</h4>
+                                        <p class="demo-text">نص توضيحي عادي باللون الافتراضي</p>
+                                        <a href="#" class="demo-link">رابط تشعبي</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="component-card">
+                                    <h5>البطاقات</h5>
+                                    <div class="component-demo">
+                                        <div class="demo-card">
+                                            <div class="demo-card-header">هذا عنوان البطاقة</div>
+                                            <div class="demo-card-body">
+                                                محتوى البطاقة يعرض هنا مع تطبيق الألوان الأساسية للمشروع
+                                            </div>
+                                            <div class="demo-card-footer">
+                                                <button class="btn small primary">زر صغير</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="component-card">
+                                    <h5>عناصر الحالة</h5>
+                                    <div class="component-demo">
+                                        <div class="status-tags">
+                                            <span class="status-tag success">تم العثور</span>
+                                            <span class="status-tag warning">قيد البحث</span>
+                                            <span class="status-tag info">معلومات جديدة</span>
+                                            <span class="status-tag alert">لم يتم العثور</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="component-card">
+                                    <h5>شريط التنقل</h5>
+                                    <div class="component-demo">
+                                        <div class="demo-nav">
+                                            <div class="demo-nav-item active">الرئيسية</div>
+                                            <div class="demo-nav-item">البحث</div>
+                                            <div class="demo-nav-item">الإبلاغات</div>
+                                            <div class="demo-nav-item">الحساب</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-showcase">
+                        <h4>نماذج تطبيقية</h4>
+                        <div class="mockup-grid">
+                            <div class="mockup-item">
+                                <div class="mockup-image mockup-app-light">
+                                    <div class="mockup-header">
+                                        <div class="mockup-status-bar"></div>
+                                        <div class="mockup-app-bar">
+                                            <div class="mockup-logo">لُقيا</div>
+                                            <div class="mockup-actions">
+                                                <i class="fas fa-bell"></i>
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mockup-section">
+                                            <h5>الإبلاغ عن مفقودات</h5>
+                                            <div class="mockup-cards">
+                                                <div class="mockup-card">
+                                                    <div class="mockup-card-icon"><i class="fas fa-wallet"></i></div>
+                                                    <div>محفظة</div>
+                                                </div>
+                                                <div class="mockup-card">
+                                                    <div class="mockup-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                                                    <div>هاتف محمول</div>
+                                                </div>
+                                                <div class="mockup-card">
+                                                    <div class="mockup-card-icon"><i class="fas fa-id-card"></i></div>
+                                                    <div>وثائق</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-section">
+                                            <h5>آخر المفقودات</h5>
+                                            <div class="mockup-list">
+                                                <div class="mockup-list-item">
+                                                    <div class="mockup-item-icon"><i class="fas fa-key"></i></div>
+                                                    <div class="mockup-item-details">
+                                                        <div class="mockup-item-title">مفاتيح سيارة</div>
+                                                        <div class="mockup-item-subtitle">صنعاء - شارع الزبيري</div>
+                                                    </div>
+                                                    <div class="mockup-item-status success">تم العثور</div>
+                                                </div>
+                                                <div class="mockup-list-item">
+                                                    <div class="mockup-item-icon"><i class="fas fa-tablet-alt"></i></div>
+                                                    <div class="mockup-item-details">
+                                                        <div class="mockup-item-title">آيباد</div>
+                                                        <div class="mockup-item-subtitle">عدن - المعلا</div>
+                                                    </div>
+                                                    <div class="mockup-item-status warning">قيد البحث</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-bottom-nav">
+                                        <div class="mockup-nav-item active"><i class="fas fa-home"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-search"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-plus-circle"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-bell"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-user"></i></div>
+                                    </div>
+                                </div>
+                                <p>تطبيق الهاتف - الوضع النهاري</p>
+                            </div>
+                            
+                            <div class="mockup-item">
+                                <div class="mockup-image mockup-app-dark">
+                                    <div class="mockup-header">
+                                        <div class="mockup-status-bar dark"></div>
+                                        <div class="mockup-app-bar dark">
+                                            <div class="mockup-logo">لُقيا</div>
+                                            <div class="mockup-actions">
+                                                <i class="fas fa-bell"></i>
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mockup-section">
+                                            <h5>الإبلاغ عن مفقودات</h5>
+                                            <div class="mockup-cards">
+                                                <div class="mockup-card dark">
+                                                    <div class="mockup-card-icon"><i class="fas fa-wallet"></i></div>
+                                                    <div>محفظة</div>
+                                                </div>
+                                                <div class="mockup-card dark">
+                                                    <div class="mockup-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                                                    <div>هاتف محمول</div>
+                                                </div>
+                                                <div class="mockup-card dark">
+                                                    <div class="mockup-card-icon"><i class="fas fa-id-card"></i></div>
+                                                    <div>وثائق</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-section">
+                                            <h5>آخر المفقودات</h5>
+                                            <div class="mockup-list">
+                                                <div class="mockup-list-item dark">
+                                                    <div class="mockup-item-icon"><i class="fas fa-key"></i></div>
+                                                    <div class="mockup-item-details">
+                                                        <div class="mockup-item-title">مفاتيح سيارة</div>
+                                                        <div class="mockup-item-subtitle">صنعاء - شارع الزبيري</div>
+                                                    </div>
+                                                    <div class="mockup-item-status success">تم العثور</div>
+                                                </div>
+                                                <div class="mockup-list-item dark">
+                                                    <div class="mockup-item-icon"><i class="fas fa-tablet-alt"></i></div>
+                                                    <div class="mockup-item-details">
+                                                        <div class="mockup-item-title">آيباد</div>
+                                                        <div class="mockup-item-subtitle">عدن - المعلا</div>
+                                                    </div>
+                                                    <div class="mockup-item-status warning">قيد البحث</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-bottom-nav dark">
+                                        <div class="mockup-nav-item active"><i class="fas fa-home"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-search"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-plus-circle"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-bell"></i></div>
+                                        <div class="mockup-nav-item"><i class="fas fa-user"></i></div>
+                                    </div>
+                                </div>
+                                <p>تطبيق الهاتف - الوضع الليلي</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- تجربة المستخدم وواجهة المستخدم -->
+                <div class="ux-ui-showcase">
+                    <h3>تجربة المستخدم وواجهة المستخدم</h3>
+                    
+                    <div class="ux-ui-intro">
+                        <p>تم تصميم واجهة المستخدم وتجربة المستخدم في منصة "لُقيا" لتكون بسيطة وسهلة الاستخدام، مع التركيز على سلاسة التنقل والوصول السريع للخدمات الأساسية. نستعرض فيما يلي بعض نماذج الاستخدام الفعلي للهوية البصرية في التطبيق.</p>
+                    </div>
+                    
+                    <div class="ux-ui-sections">
+                        <div class="ux-ui-section">
+                            <h4>صفحة تسجيل المفقودات <span class="ui-badge">واجهة المستخدم</span></h4>
+                            <div class="mockup-container">
+                                <div class="mockup-frame">
+                                    <div class="mockup-header-bar">
+                                        <div class="mockup-title">إضافة مفقودات</div>
+                                        <div class="mockup-controls">
+                                            <span class="mockup-control"></span>
+                                            <span class="mockup-control"></span>
+                                            <span class="mockup-control"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-body">
+                                        <div class="mockup-form">
+                                            <div class="form-progress">
+                                                <div class="progress-step active">
+                                                    <div class="step-number">1</div>
+                                                    <div class="step-text">نوع المفقودات</div>
+                                                </div>
+                                                <div class="progress-line active"></div>
+                                                <div class="progress-step active">
+                                                    <div class="step-number">2</div>
+                                                    <div class="step-text">التفاصيل</div>
+                                                </div>
+                                                <div class="progress-line"></div>
+                                                <div class="progress-step">
+                                                    <div class="step-number">3</div>
+                                                    <div class="step-text">المكان</div>
+                                                </div>
+                                                <div class="progress-line"></div>
+                                                <div class="progress-step">
+                                                    <div class="step-number">4</div>
+                                                    <div class="step-text">المراجعة</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-section">
+                                                <h5>تفاصيل المفقودات</h5>
+                                                <div class="form-group">
+                                                    <label>الوصف</label>
+                                                    <textarea rows="3" placeholder="وصف تفصيلي للغرض المفقود"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>اللون الرئيسي</label>
+                                                    <div class="color-options">
+                                                        <span class="color-option" style="background-color: #000000;"></span>
+                                                        <span class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;"></span>
+                                                        <span class="color-option" style="background-color: #1E88E5;"></span>
+                                                        <span class="color-option" style="background-color: #26A69A;"></span>
+                                                        <span class="color-option" style="background-color: #FF9800;"></span>
+                                                        <span class="color-option selected" style="background-color: #F44336;"></span>
+                                                        <span class="color-option" style="background-color: #4CAF50;"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>صورة المفقودات (اختياري)</label>
+                                                    <div class="upload-box">
+                                                        <i class="fas fa-cloud-upload-alt"></i>
+                                                        <span>اسحب الصورة هنا أو انقر للتحميل</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <button class="btn secondary">السابق</button>
+                                                <button class="btn primary">التالي</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mockup-description">
+                                    <h5>التصميم المرئي:</h5>
+                                    <ul>
+                                        <li>استخدام اللون الأزرق في أزرار التالي لتوجيه المستخدم</li>
+                                        <li>تقسيم العملية إلى خطوات واضحة مع مؤشر تقدم</li>
+                                        <li>تباعد مناسب بين العناصر لتحسين القراءة</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ux-ui-section">
+                            <h4>عرض تفاصيل المفقودات <span class="ui-badge">تجربة المستخدم</span></h4>
+                            <div class="mockup-container">
+                                <div class="mockup-frame">
+                                    <div class="mockup-header-bar">
+                                        <div class="mockup-title">تفاصيل المفقودات</div>
+                                        <div class="mockup-controls">
+                                            <span class="mockup-control"></span>
+                                            <span class="mockup-control"></span>
+                                            <span class="mockup-control"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-body">
+                                        <div class="item-details">
+                                            <div class="item-header">
+                                                <div class="item-status success">تم العثور عليه</div>
+                                                <div class="item-date">18 أبريل 2023</div>
+                                            </div>
+                                            <div class="item-image-container">
+                                                <div class="item-image-placeholder">
+                                                    <i class="fas fa-wallet fa-3x"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-info">
+                                                <h5>محفظة جلدية حمراء</h5>
+                                                <div class="info-row">
+                                                    <div class="info-label"><i class="fas fa-map-marker-alt"></i> المكان:</div>
+                                                    <div class="info-value">صنعاء - شارع التحرير بجوار مطعم الأصيل</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div class="info-label"><i class="fas fa-user-circle"></i> وجدها:</div>
+                                                    <div class="info-value">أحمد محمد</div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div class="info-label"><i class="fas fa-info-circle"></i> معلومات إضافية:</div>
+                                                    <div class="info-value">تحتوي على بطاقات شخصية وبعض النقود</div>
+                                                </div>
+                                            </div>
+                                            <div class="item-actions">
+                                                <button class="btn primary btn-block"><i class="fas fa-comments"></i> التواصل مع من وجدها</button>
+                                                <button class="btn secondary btn-block"><i class="fas fa-share-alt"></i> مشاركة</button>
+                                            </div>
+                                            <div class="similar-items">
+                                                <h5>مفقودات مشابهة</h5>
+                                                <div class="similar-items-grid">
+                                                    <div class="similar-item">
+                                                        <div class="similar-item-icon"><i class="fas fa-wallet"></i></div>
+                                                        <div class="similar-item-title">محفظة سوداء</div>
+                                                    </div>
+                                                    <div class="similar-item">
+                                                        <div class="similar-item-icon"><i class="fas fa-wallet"></i></div>
+                                                        <div class="similar-item-title">محفظة بنية</div>
+                                                    </div>
+                                                    <div class="similar-item">
+                                                        <div class="similar-item-icon"><i class="fas fa-credit-card"></i></div>
+                                                        <div class="similar-item-title">بطاقة هوية</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mockup-description">
+                                    <h5>تجربة المستخدم:</h5>
+                                    <ul>
+                                        <li>عرض واضح للمعلومات المهمة في مقدمة الصفحة</li>
+                                        <li>استخدام الألوان للتمييز بين الحالات (تم العثور/قيد البحث)</li>
+                                        <li>وجود خيارات سريعة للتفاعل مع ما تم العثور عليه</li>
+                                        <li>اقتراح مفقودات مشابهة لزيادة فرص العثور على الغرض المفقود</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ux-ui-section">
+                            <h4>الإشعارات والتنبيهات <span class="ui-badge">تفاعل المستخدم</span></h4>
+                            <div class="mockup-container">
+                                <div class="notification-examples">
+                                    <div class="notification-item success">
+                                        <div class="notification-icon"><i class="fas fa-check-circle"></i></div>
+                                        <div class="notification-content">
+                                            <div class="notification-title">تم العثور على مفقوداتك!</div>
+                                            <div class="notification-message">شخص ما عثر على "هاتف آيفون" الذي أبلغت عنه.</div>
+                                        </div>
+                                        <div class="notification-action"><button class="btn small primary">عرض</button></div>
+                                    </div>
+                                    
+                                    <div class="notification-item info">
+                                        <div class="notification-icon"><i class="fas fa-info-circle"></i></div>
+                                        <div class="notification-content">
+                                            <div class="notification-title">هناك بلاغ جديد يطابق ما عثرت عليه</div>
+                                            <div class="notification-message">هناك شخص يبحث عن "محفظة جلدية" تشبه ما وجدته.</div>
+                                        </div>
+                                        <div class="notification-action"><button class="btn small primary">التفاصيل</button></div>
+                                    </div>
+                                    
+                                    <div class="notification-item warning">
+                                        <div class="notification-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                        <div class="notification-content">
+                                            <div class="notification-title">تذكير: لديك بلاغ بدون تحديث</div>
+                                            <div class="notification-message">لم يتم تحديث حالة بلاغك عن "مفتاح سيارة" منذ أسبوعين.</div>
+                                        </div>
+                                        <div class="notification-action"><button class="btn small secondary">تحديث</button></div>
+                                    </div>
+                                    
+                                    <div class="notification-item dark">
+                                        <div class="notification-icon"><i class="fas fa-comment-dots"></i></div>
+                                        <div class="notification-content">
+                                            <div class="notification-title">رسالة جديدة</div>
+                                            <div class="notification-message">لديك رسالة جديدة من أحمد بخصوص "محفظة جلدية".</div>
+                                        </div>
+                                        <div class="notification-action"><button class="btn small tertiary">قراءة</button></div>
+                                    </div>
+                                </div>
+                                <div class="mockup-description">
+                                    <h5>الإشعارات والتنبيهات:</h5>
+                                    <ul>
+                                        <li>استخدام الألوان المناسبة لنوع الإشعار (نجاح، معلومات، تحذير)</li>
+                                        <li>أيقونات واضحة تعبر عن نوع الإشعار</li>
+                                        <li>رسائل موجزة وواضحة مع خيار للإجراء</li>
+                                        <li>تصميم متناسق يتوافق مع الهوية البصرية العامة</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ux-ui-section">
+                            <h4>التنقل بين الصفحات <span class="ui-badge">تدفق المستخدم</span></h4>
+                            <div class="mockup-container">
+                                <div class="user-flow-diagram">
+                                    <div class="flow-step">
+                                        <div class="flow-step-content primary">
+                                            <div class="flow-icon"><i class="fas fa-sign-in-alt"></i></div>
+                                            <div class="flow-text">تسجيل الدخول</div>
+                                        </div>
+                                        <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+                                    </div>
+                                    
+                                    <div class="flow-step">
+                                        <div class="flow-step-content tertiary">
+                                            <div class="flow-icon"><i class="fas fa-home"></i></div>
+                                            <div class="flow-text">الصفحة الرئيسية</div>
+                                        </div>
+                                        <div class="flow-branches">
+                                            <div class="flow-branch">
+                                                <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+                                                <div class="flow-step-content secondary">
+                                                    <div class="flow-icon"><i class="fas fa-search"></i></div>
+                                                    <div class="flow-text">البحث عن مفقودات</div>
+                                                </div>
+                                            </div>
+                                            <div class="flow-branch">
+                                                <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+                                                <div class="flow-step-content info">
+                                                    <div class="flow-icon"><i class="fas fa-plus-circle"></i></div>
+                                                    <div class="flow-text">الإبلاغ عن مفقودات</div>
+                                                </div>
+                                            </div>
+                                            <div class="flow-branch">
+                                                <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+                                                <div class="flow-step-content success">
+                                                    <div class="flow-icon"><i class="fas fa-upload"></i></div>
+                                                    <div class="flow-text">الإبلاغ عن معثورات</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mockup-description">
+                                    <h5>تدفق المستخدم:</h5>
+                                    <ul>
+                                        <li>تسلسل منطقي لخطوات تفاعل المستخدم مع المنصة</li>
+                                        <li>استخدام الألوان المميزة لكل نوع من الإجراءات</li>
+                                        <li>تصميم يسهل فهم العلاقة بين مختلف أجزاء التطبيق</li>
+                                        <li>الاعتماد على الألوان الأساسية للهوية البصرية</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="design-principles">
+                        <h4>مبادئ التصميم المعتمدة</h4>
+                        <div class="principles-grid">
+                            <div class="principle-item">
+                                <div class="principle-icon" style="background-color: #1E88E5;"><i class="fas fa-hand-pointer"></i></div>
+                                <h5>سهولة الاستخدام</h5>
+                                <p>واجهات بسيطة وواضحة تمكن المستخدمين من جميع الفئات من استخدام المنصة بسهولة</p>
+                            </div>
+                            <div class="principle-item">
+                                <div class="principle-icon" style="background-color: #26A69A;"><i class="fas fa-universal-access"></i></div>
+                                <h5>إمكانية الوصول</h5>
+                                <p>تصميم يراعي احتياجات جميع المستخدمين بغض النظر عن قدراتهم أو أجهزتهم</p>
+                            </div>
+                            <div class="principle-item">
+                                <div class="principle-icon" style="background-color: #FF9800;"><i class="fas fa-mobile-alt"></i></div>
+                                <h5>تجاوب مع كافة الأجهزة</h5>
+                                <p>تصميم متجاوب يعمل بسلاسة على جميع أحجام الشاشات والأجهزة</p>
+                            </div>
+                            <div class="principle-item">
+                                <div class="principle-icon" style="background-color: #FFC107;"><i class="fas fa-bolt"></i></div>
+                                <h5>سرعة وكفاءة</h5>
+                                <p>واجهات سريعة الاستجابة وفعالة توفر الوقت والجهد على المستخدم</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- قسم الوضع المظلم -->
+                    <div class="dark-mode-showcase">
+                        <h4>الوضع المظلم (Dark Mode)</h4>
+                        <div class="ux-ui-intro">
+                            <p>يوفر تطبيق "لُقيا" وموقعه وضعاً مظلماً كاملاً يتيح للمستخدمين تجربة استخدام مريحة في الإضاءة المنخفضة ويقلل الإجهاد البصري. يحافظ التصميم على نفس الهوية البصرية الأساسية مع تعديل الألوان لتلائم الوضع المظلم.</p>
+                        </div>
+                        
+                        <div class="dark-mode-toggle-demo">
+                            <div class="mode-preview light">
+                                <div class="preview-header light">
+                                    <div class="preview-title">الوضع النهاري</div>
+                                    <div class="preview-switch light"></div>
+                                </div>
+                                <div class="preview-content">
+                                    <div class="preview-card light">
+                                        <h5><i class="fas fa-key"></i> مفاتيح سيارة</h5>
+                                        <p>تم العثور عليها في منطقة شارع الزبيري بتاريخ 18 أبريل 2023</p>
+                                        <button class="preview-button light-primary">التفاصيل</button>
+                                    </div>
+                                    <div class="preview-status">
+                                        <span class="status-tag success">تم العثور</span>
+                                        <span class="status-tag warning">قيد البحث</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mode-preview dark">
+                                <div class="preview-header dark">
+                                    <div class="preview-title">الوضع الليلي</div>
+                                    <div class="preview-switch dark"></div>
+                                </div>
+                                <div class="preview-content">
+                                    <div class="preview-card dark">
+                                        <h5><i class="fas fa-key"></i> مفاتيح سيارة</h5>
+                                        <p>تم العثور عليها في منطقة شارع الزبيري بتاريخ 18 أبريل 2023</p>
+                                        <button class="preview-button dark-primary">التفاصيل</button>
+                                    </div>
+                                    <div class="preview-status">
+                                        <span class="status-tag success">تم العثور</span>
+                                        <span class="status-tag warning">قيد البحث</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ux-ui-section">
+                            <h4>مقارنة بين النمطين <span class="ui-badge">النهاري والليلي</span></h4>
+                            <div class="mockup-container">
+                                <div class="mockup-frame">
+                                    <div class="mockup-body dark-comparison">
+                                        <div class="comparison-grid">
+                                            <div class="comparison-item">
+                                                <div class="comparison-header">
+                                                    <h5>الألوان الأساسية</h5>
+                                                </div>
+                                                <div class="comparison-content">
+                                                    <div class="color-samples">
+                                                        <div class="color-sample-group">
+                                                            <div class="color-sample-label">الوضع النهاري</div>
+                                                            <div class="color-sample" style="background-color: #1E88E5;"></div>
+                                                            <div class="color-sample" style="background-color: #26A69A;"></div>
+                                                            <div class="color-sample" style="background-color: #FF9800;"></div>
+                                                        </div>
+                                                        <div class="color-sample-group">
+                                                            <div class="color-sample-label">الوضع الليلي</div>
+                                                            <div class="color-sample" style="background-color: #64B5F6;"></div>
+                                                            <div class="color-sample" style="background-color: #4DB6AC;"></div>
+                                                            <div class="color-sample" style="background-color: #FFB74D;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="comparison-item">
+                                                <div class="comparison-header">
+                                                    <h5>الخلفيات والنصوص</h5>
+                                                </div>
+                                                <div class="comparison-content">
+                                                    <div class="bg-text-samples">
+                                                        <div class="bg-sample">
+                                                            <div class="bg-label">النهاري</div>
+                                                            <div class="bg-box light">
+                                                                <div class="text-sample dark">نص داكن</div>
+                                                                <div class="text-sample light">نص فاتح</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-sample">
+                                                            <div class="bg-label">الليلي</div>
+                                                            <div class="bg-box dark">
+                                                                <div class="text-sample light">نص فاتح</div>
+                                                                <div class="text-sample blue">نص أزرق</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mockup-description">
+                                    <h5>تصميم الوضع المظلم:</h5>
+                                    <ul>
+                                        <li>استخدام درجات أفتح من نفس ألوان الهوية في الوضع المظلم</li>
+                                        <li>زيادة التباين بين النصوص والخلفيات لتحسين القراءة</li>
+                                        <li>تقليل شدة ألوان العناصر المضيئة لمنع إجهاد العين</li>
+                                        <li>الحفاظ على نفس الهيكل والترتيب بين الوضعين</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dark-mode-benefits">
+                            <h5>مميزات الوضع المظلم</h5>
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+                                    <div class="benefit-text">تقليل إجهاد العين في الإضاءة المنخفضة</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon"><i class="fas fa-battery-full"></i></div>
+                                    <div class="benefit-text">توفير طاقة البطارية في أجهزة OLED و AMOLED</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon"><i class="fas fa-moon"></i></div>
+                                    <div class="benefit-text">تجربة استخدام مريحة في الليل وفي الأماكن مظلمة</div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon"><i class="fas fa-universal-access"></i></div>
+                                    <div class="benefit-text">تحسين إمكانية الوصول للمستخدمين ذوي الحساسية للضوء</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="brand-guidelines">
+                <h3>إرشادات استخدام الهوية البصرية</h3>
+                <ul class="guidelines-list">
+                    <li>
+                        <div class="guideline-icon"><i class="fas fa-palette"></i></div>
+                        <div class="guideline-content">
+                            <h4>استخدام الألوان الأساسية</h4>
+                            <p>استخدم أزرق لُقيا للتأكيد على العناصر الرئيسية والمهمة، واستخدم فيروزي لُقيا للعناصر المساندة.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="guideline-icon"><i class="fas fa-exclamation-circle"></i></div>
+                        <div class="guideline-content">
+                            <h4>استخدام الألوان الثانوية</h4>
+                            <p>خصص برتقالي اللقاء للمؤشرات الإيجابية ونقاط الدعوة للعمل، واستخدم أصفر الأمل للعناصر التي تحتاج انتباه المستخدم.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="guideline-icon"><i class="fas fa-moon"></i></div>
+                        <div class="guideline-content">
+                            <h4>تطبيق الوضع الليلي</h4>
+                            <p>الحفاظ على تدرج لوني مشابه في الوضع الليلي مع استخدام درجات أفتح من نفس الألوان للحفاظ على الرؤية والتباين.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="guideline-icon"><i class="fas fa-universal-access"></i></div>
+                        <div class="guideline-content">
+                            <h4>إمكانية الوصول</h4>
+                            <p>التأكد من وجود تباين كافٍ بين الألوان والنصوص لتسهيل القراءة لجميع المستخدمين.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">استفسارات</span>
+                <h2>الأسئلة الشائعة</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-content">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>كيف يمكنني الإبلاغ عن غرض مفقود؟</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>سيتمكن المستخدمون من الإبلاغ عن الأغراض المفقودة من خلال تطبيق الهاتف المحمول أو موقع الويب. ستحتاج إلى إنشاء حساب، ثم تقديم تفاصيل الغرض المفقود مثل النوع، المكان، التاريخ، والخصائص المميزة له.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>كيف أعرف أن الشخص الذي يدعي ملكية الغرض هو المالك الحقيقي؟</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعتمد نظاماً دقيقاً للتحقق من هوية المستخدمين، وسيطلب من المالك تقديم تفاصيل دقيقة عن الغرض لا يعرفها سوى المالك الحقيقي. كما يمكن استخدام وسائل إثبات إضافية مثل الفواتير أو الصور.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>هل الخدمة مجانية أم مدفوعة؟</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>خدمة "لُقيا" الأساسية مجانية تماماً، سواء للإبلاغ عن المفقودات أو العثور عليها. نحن مشروع غير ربحي يهدف إلى خدمة المجتمع. قد نقدم في المستقبل خدمات اختيارية مميزة لدعم استدامة المشروع.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>كيف تضمنون خصوصية بياناتي الشخصية؟</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نلتزم بحماية بيانات المستخدمين من خلال تطبيق معايير أمان عالية. لا نشارك معلوماتك الشخصية إلا بموافقتك وفي حدود ما يخدم عملية استرداد المفقودات. يمكنك التحكم في المعلومات التي ترغب في مشاركتها.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>هل هناك مكافأة لمن يعيد الأغراض المفقودة؟</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>تترك مسألة المكافآت للاتفاق بين الأطراف المعنية. نحن نشجع على إعادة المفقودات كواجب أخلاقي وديني، لكننا لا نمانع في تقديم مكافآت رمزية كتقدير للأمانة، وهذا متروك لتقدير صاحب الغرض.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-cta">
+                    <h3>هل لديك المزيد من الأسئلة؟</h3>
+                    <p>نحن هنا لمساعدتك والإجابة على جميع استفساراتك</p>
+                    <a href="#support" class="btn primary">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-title-tag">ساهم معنا</span>
+                <h2>ادعم مشروع لُقيا</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="support-content">
+                <div class="support-text">
+                    <p>يمكنك المساهمة في مشروع "لُقيا" بطرق مختلفة - من خلال الدعم المالي، المشاركة التقنية، أو بناء شراكات استراتيجية. انضم إلينا في رحلتنا لبناء منصة تعيد المفقودات وتعزز قيم الأمانة والتكافل في المجتمع اليمني.</p>
+                    
+                    <div class="support-options">
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h3>الدعم المالي</h3>
+                            <p>ساهم في تمويل تطوير المنصة وتشغيلها من خلال تبرع مالي</p>
+                            <a href="#" class="btn small primary">تبرع الآن</a>
+                        </div>
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>الدعم التقني</h3>
+                            <p>ساهم بخبراتك في تطوير التطبيق والموقع وتحسين الأداء</p>
+                            <a href="#" class="btn small secondary">سجل كمتطوع</a>
+                        </div>
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>الشراكات</h3>
+                            <p>ساهم في بناء شراكات استراتيجية مع المؤسسات والشركات</p>
+                            <a href="#" class="btn small tertiary">اقترح شراكة</a>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h3>انضم إلى نشرتنا البريدية</h3>
+                        <p>احصل على آخر المستجدات والأخبار عن مشروع لُقيا</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="البريد الإلكتروني" required>
+                            <button type="submit" class="btn primary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="support-form">
+                    <h3>تواصل معنا</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">نوع الدعم</label>
+                            <select id="type" name="type">
+                                <option value="financial">دعم مالي</option>
+                                <option value="technical">دعم تقني</option>
+                                <option value="partnership">شراكة استراتيجية</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">رسالتك</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary btn-block">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2>لُقيا</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#vision">رؤيتنا</a></li>
+                        <li><a href="#goals">أهدافنا</a></li>
+                        <li><a href="#success-indicators">مؤشرات النجاح</a></li>
+                        <li><a href="#how-it-works">كيفية العمل</a></li>
+                        <li><a href="#benefits">الفوائد والتأثير</a></li>
+                        <li><a href="#audience">الجمهور المستهدف</a></li>
+                        <li><a href="#brand">الهوية البصرية</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#support">ادعمنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> العنوان:  اليمن</p>
+                    <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@luqya.org</p>
+                    <p><i class="fas fa-phone"></i> رقم الهاتف: +967 777 777 777</p>
+                </div>
+                <div class="footer-social">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 لُقيا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- زر العودة إلى الأعلى -->
+    <button id="back-to-top" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>

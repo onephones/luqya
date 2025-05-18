@@ -1,0 +1,41 @@
+{
+    "name": "لُقيا - منصة إعادة المفقودات في اليمن",
+    "short_name": "لُقيا",
+    "description": "المنصة الأولى في اليمن لإعادة المفقودات بطريقة سهلة وآمنة",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1E88E5",
+    "dir": "rtl",
+    "lang": "ar",
+    "icons": [
+        {
+            "src": "img/logo-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "img/logo-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "prefer_related_applications": false,
+    "categories": ["social", "utilities"],
+    "shortcuts": [
+        {
+            "name": "الإبلاغ عن مفقودات",
+            "url": "/index.html#how-it-works",
+            "description": "الإبلاغ عن أغراض مفقودة"
+        },
+        {
+            "name": "ادعم المشروع",
+            "url": "/index.html#support",
+            "description": "ساهم في دعم مشروع لُقيا"
+        }
+    ]
+} 
