@@ -19,72 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initBenefitsAnimations();
     initTestimonialSlider();
     
-    // Dark Mode Toggle - Enhanced version
-    const modeToggle = document.getElementById('mode-switch');
-    const body = document.body;
-    
-    // Check system preference for dark mode
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Get user preference from localStorage or use system preference
-    const currentMode = localStorage.getItem('mode') || (prefersDarkScheme.matches ? 'dark' : 'light');
-    
-    // Apply initial mode
-    if (currentMode === 'dark') {
-        body.classList.add('dark-mode');
-        modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1A262F');
-    } else {
-        modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#FFFFFF');
-    }
-    
-    // Add transition class after initial load to enable smooth transitions
-    setTimeout(() => {
-        document.documentElement.classList.add('color-theme-in-transition');
-    }, 100);
-    
-    // Toggle dark/light mode with enhanced animation
-    modeToggle.addEventListener('click', function() {
-        // Add transition class
-        document.documentElement.classList.add('color-theme-in-transition');
-        
-        // Toggle dark mode class
-        body.classList.toggle('dark-mode');
-        
-        // Update icon and store preference
-        if (body.classList.contains('dark-mode')) {
-            modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            localStorage.setItem('mode', 'dark');
-            document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1A262F');
-        } else {
-            modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            localStorage.setItem('mode', 'light');
-            document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#FFFFFF');
-        }
-        
-        // Remove transition class after animation completes
-        setTimeout(() => {
-            document.documentElement.classList.remove('color-theme-in-transition');
-        }, 500);
-    });
-    
-    // Listen for system dark mode preference changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-        // Only apply if user hasn't set a preference
-        if (!localStorage.getItem('mode')) {
-            if (e.matches) {
-                body.classList.add('dark-mode');
-                modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1A262F');
-            } else {
-                body.classList.remove('dark-mode');
-                modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#FFFFFF');
-            }
-        }
-    });
-    
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
@@ -362,12 +296,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function initThemeToggle() {
     const toggleBtn = document.getElementById('mode-switch');
     const htmlElement = document.documentElement;
+    const body = document.body;
     const themeIcon = toggleBtn.querySelector('i');
     
     // Check for saved user preference
     const savedTheme = localStorage.getItem('theme');
+    
+    // Only enable dark mode if explicitly saved as 'dark'
     if (savedTheme === 'dark') {
         enableDarkMode();
+    } else {
+        // Default to light mode (even if no preference is saved)
+        disableDarkMode();
+        // Save light mode as the default if no preference exists
+        if (!savedTheme) {
+            localStorage.setItem('theme', 'light');
+        }
     }
     
     toggleBtn.addEventListener('click', () => {
@@ -383,17 +327,24 @@ function initThemeToggle() {
     // Check for system preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     prefersDarkScheme.addEventListener('change', (e) => {
-        if (e.matches && !localStorage.getItem('theme')) {
-            enableDarkMode();
-        } else if (!e.matches && !localStorage.getItem('theme')) {
-            disableDarkMode();
+        // Only apply system preference if user hasn't explicitly chosen a theme
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                enableDarkMode();
+                localStorage.setItem('theme', 'dark');
+            } else {
+                disableDarkMode();
+                localStorage.setItem('theme', 'light');
+            }
         }
     });
     
     function enableDarkMode() {
         htmlElement.classList.add('color-theme-in-transition');
         htmlElement.classList.add('dark-mode');
+        body.classList.add('dark-mode');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#1A262F');
         setTimeout(() => {
             htmlElement.classList.remove('color-theme-in-transition');
         }, 300);
@@ -402,7 +353,9 @@ function initThemeToggle() {
     function disableDarkMode() {
         htmlElement.classList.add('color-theme-in-transition');
         htmlElement.classList.remove('dark-mode');
+        body.classList.remove('dark-mode');
         themeIcon.classList.replace('fa-sun', 'fa-moon');
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#FFFFFF');
         setTimeout(() => {
             htmlElement.classList.remove('color-theme-in-transition');
         }, 300);

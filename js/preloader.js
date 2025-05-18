@@ -14,16 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const spinner = document.createElement('div');
     spinner.className = 'preloader-spinner';
     
+    // Create preloader text
     const preloaderText = document.createElement('div');
     preloaderText.className = 'preloader-text';
     
-    // Split the text "لُقيا" into individual spans for animation
+    // Display "لُقيا" as a single word instead of splitting it
     const siteName = "لُقيا";
-    siteName.split('').forEach(letter => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        preloaderText.appendChild(span);
-    });
+    preloaderText.textContent = siteName;
     
     // Assemble preloader
     preloaderLogo.appendChild(spinner);
