@@ -414,19 +414,62 @@ function initMobileMenu() {
 // Tabs Functionality
 function initTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
-    
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // تأثير hover احترافي على أزرار التاب
+    tabBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            if (typeof gsap !== 'undefined') {
+                gsap.to(btn, { scale: 1.08, y: -4, duration: 0.25, ease: 'back.out(1.7)' });
+            } else {
+                btn.style.transform = 'scale(1.08) translateY(-4px)';
+            }
+        });
+        btn.addEventListener('mouseleave', () => {
+            if (typeof gsap !== 'undefined') {
+                gsap.to(btn, { scale: 1, y: 0, duration: 0.25, ease: 'back.out(1.7)' });
+            } else {
+                btn.style.transform = '';
+            }
+        });
+    });
+
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Remove active class from all buttons and content
             tabBtns.forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
+            tabContents.forEach(content => {
+                // أنيميشن خروج للمحتوى الحالي
+                if (content.classList.contains('active')) {
+                    if (typeof gsap !== 'undefined') {
+                        gsap.to(content, { opacity: 0, y: 30, duration: 0.3, ease: 'power2.in', onComplete: () => {
+                            content.classList.remove('active');
+                            content.style.opacity = '';
+                            content.style.transform = '';
+                        }});
+                    } else {
+                        content.classList.remove('active');
+                    }
+                } else {
+                    content.classList.remove('active');
+                }
             });
-            
-            // Add active class to clicked button and corresponding content
+
+            // Add active class to clicked button
             btn.classList.add('active');
+
+            // Show corresponding content with أنيميشن دخول
             const targetId = btn.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active');
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+                if (typeof gsap !== 'undefined') {
+                    gsap.fromTo(targetContent, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', clearProps: 'opacity,transform' });
+                } else {
+                    targetContent.style.opacity = '1';
+                    targetContent.style.transform = 'translateY(0)';
+                }
+            }
         });
     });
 }
